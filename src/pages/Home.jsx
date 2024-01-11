@@ -39,6 +39,7 @@ const Home = () => {
                     <Robloxian position={scenePosition} isRotating={isRotating} setIsRotating={setIsRotating} currentStage={currentStage} setCurrentStage={setCurrentStage} />
                 </Suspense>
             </Canvas>
+            <p>Nothing to see here...</p>
 
         </section>
 
