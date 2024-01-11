@@ -4,10 +4,11 @@ import Model from '../models/Model'
 import Loader from '../components/Loader'
 import Sky from '../models/Sky'
 import Robloxian from '../models/Robloxian'
+import ChatBox from '../components/ChatBox'
 
 const Home = () => {
     const [isRotating, setIsRotating] = useState(false);
-    const [isCentered, setIsCentered] = useState(false);
+    const [currentStage, setCurrentStage] = useState(null);
     const adjustForScreen = () => {
         let screenScale = [1, 1, 1];
         let screenPosition = [0
@@ -26,13 +27,16 @@ const Home = () => {
 
     return (
         <section className='w-full h-screen relative'>
+            <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+                {currentStage && <ChatBox currentStage={currentStage} />}
+            </div>
             <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
                 camera={{ near: 0.1, far: 1000 }}>
                 <Suspense fallback={<Loader />}>
                     <ambientLight intensity={1} />
                     <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
 
-                    <Robloxian position={scenePosition} isRotating={isRotating} setIsRotating={setIsRotating} isCentered={isCentered} setIsCentered={setIsCentered} />
+                    <Robloxian position={scenePosition} isRotating={isRotating} setIsRotating={setIsRotating} currentStage={currentStage} setCurrentStage={setCurrentStage} />
                 </Suspense>
             </Canvas>
 
