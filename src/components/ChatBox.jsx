@@ -6,7 +6,7 @@ const ChatBox = ({ currentStage }) => {
     const Stages = {
         1: (
             <div>
-                <p className='font-bold text-3xl'>Hi! Welcome to my Portfolio.</p>
+                <p className='font-bold text-3xl'>Hi! I'm Christopher Kim.</p>
             </div>
         ),
         2: (

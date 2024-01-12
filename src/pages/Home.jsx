@@ -11,8 +11,7 @@ const Home = () => {
     const [currentStage, setCurrentStage] = useState(null);
     const adjustForScreen = () => {
         let screenScale = [1, 1, 1];
-        let screenPosition = [0
-            , 0, -5];
+        let screenPosition = [0, 0, -5];
         let sceneRotation = [0, 1.5, 0];
 
         if (window.innerWidth < 768) {
@@ -20,7 +19,6 @@ const Home = () => {
         }
 
         return [screenScale, screenPosition, sceneRotation];
-
     }
 
     const [sceneScale, scenePosition, sceneRotation] = adjustForScreen();

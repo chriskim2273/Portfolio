@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useRef, useEffect, useState } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useAnimations, useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { a } from "@react-spring/three"
 import * as THREE from 'three'
@@ -42,13 +42,10 @@ const Robloxian = ({ isRotating, setIsRotating, currentStage, setCurrentStage, .
     }
 
     useEffect(() => {
-
-
         const canvas = gl.domElement;
         canvas.addEventListener('pointerdown', handlePointerDown)
         canvas.addEventListener('pointerup', handlePointerUp)
         canvas.addEventListener('pointermove', handlePointerMove)
-
 
         return () => {
             canvas.removeEventListener('pointerdown', handlePointerDown)
@@ -63,7 +60,7 @@ const Robloxian = ({ isRotating, setIsRotating, currentStage, setCurrentStage, .
 
 
         if (!isRotating) {
-            robloxianRef.current.rotation.y += 0.001 * Math.PI;
+            robloxianRef.current.rotation.y += 0.005 * Math.PI;
             rotationSpeed.current *= dampingFactor;
 
             const rotation = robloxianRef.current.rotation.y;
