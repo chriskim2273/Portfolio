@@ -58,9 +58,11 @@ const Robloxian = ({ isRotating, setIsRotating, currentStage, setCurrentStage, .
     useFrame(({ clock }) => {
         robloxianRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2;
 
-
         if (!isRotating) {
-            robloxianRef.current.rotation.y += 0.005 * Math.PI;
+            robloxianRef.current.rotation.y += 0.003 * Math.PI;
+            if (currentStage === 2) {
+                robloxianRef.current.rotation.y += 0.006 * Math.PI;
+            }
             rotationSpeed.current *= dampingFactor;
 
             const rotation = robloxianRef.current.rotation.y;
@@ -86,7 +88,7 @@ const Robloxian = ({ isRotating, setIsRotating, currentStage, setCurrentStage, .
             //console.log(normalizedRotation);
             // Set the current stage based on the island's orientation
             switch (true) {
-                case normalizedRotation >= 0 && normalizedRotation <= 3:
+                case normalizedRotation >= 0.25 && normalizedRotation <= 2.75:
                     setCurrentStage(1);
                     break;
                 default:
