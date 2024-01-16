@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import NavBar from './components/NavBar'
@@ -6,10 +6,12 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import BIRDS from 'vanta/dist/vanta.birds.min'
 
 function App() {
+
   return (
-    <main className='bg-slate-/20'>
+    <main className='bg-slate-300/20 h-full'>
       <Router>
         <NavBar />
         <Routes>
