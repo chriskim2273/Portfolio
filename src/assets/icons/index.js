@@ -26,8 +26,34 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import sbu from './sbu.svg'
+import iotnation from './iotnation.svg'
+import mysql from './mysql.svg'
+import python from './python-light.svg'
+import cpp from './cpp-light.svg'
+import c from './c-light.svg'
+import java from './java-light.svg'
+import aws from './aws.svg'
+import flask from './flask-light.svg'
+import postman from './postman.svg'
+import vsc from './vscode-light.svg'
+import kibana from './kibana.svg'
+import elasticsearch from './elasticsearch.svg'
+import firebase from './firebase.svg'
 
 export {
+    kibana,
+    elasticsearch,
+    firebase,
+    mysql,
+    python,
+    cpp,
+    c,
+    java,
+    aws,
+    flask,
+    postman,
+    vsc,
     css,
     express,
     git,
@@ -55,5 +81,7 @@ export {
     arrow,
     contact,
     soundon,
-    soundoff
+    soundoff,
+    iotnation,
+    sbu
 }

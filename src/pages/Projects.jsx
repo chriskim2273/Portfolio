@@ -3,6 +3,7 @@ import { projects } from '../constants'
 import { Link } from 'react-router-dom'
 import { arrow } from '../assets/icons'
 import CTA from '../components/CTA'
+import YouTube from 'react-youtube'
 
 const Projects = () => {
     return (
@@ -23,16 +24,17 @@ const Projects = () => {
             <div className='flex flex-wrap my-20 gap-16'>
                 {projects.map((project) => (
                     <div key={project.name} className='lg:w=[400px] w-full'>
-                        <div className='block-container w-12 h-12'>
-                            <div className={`btn-back rounded-xl ${project.theme}`} />
-                            <div className='btn-front rounded-xl flex justify-center items-center'>
-                                <img
-                                    src={project.iconUrl}
-                                    alt="Project Icon"
-                                    className='w-1/2 h-1/2 object-contain' />
+                        {/*
+                            <div className='block-container w-12 h-12 flex'>
+                                <div className={`btn-back rounded-xl ${project.theme}`} />
+                                <div className='btn-front rounded-xl flex justify-center items-center'>
+                                    <img
+                                        src={project.iconUrl}
+                                        alt="Project Icon"
+                                        className='w-1/2 h-1/2 object-contain' />
+                                </div>
                             </div>
-                        </div>
-
+                        */}
                         <div className='mt-5 flex flex-col'>
                             <h4 className='text-2xl font-poppins font-semibold'>
                                 {project.name}
@@ -40,7 +42,20 @@ const Projects = () => {
                             <p className='mt-2 text-slate-500'>
                                 {project.description}
                             </p>
-                            <div className='mt-5 flex items-center gap-2 font-poppins'>
+                            <div className='mt-5 flex justify-center items-center'>
+                                <YouTube videoId={"2g811Eo7K8U"
+                                    //projects.videoId
+                                } opts={{
+                                    height: '390',
+                                    width: '640',
+                                    playerVars: {
+                                        autoplay: 1,
+                                    },
+                                }} onReady={(event) => {
+                                    event.target.pauseVideo();
+                                }} />
+                            </div>
+                            <div className='mt-5 flex items-center justify-center gap-2 font-poppins'>
                                 <Link to={project.link} target="_blank" rel="noopener noreferrer" className='front-semibold text-blue-600'>
                                     Live Link
                                 </Link>

@@ -140,7 +140,7 @@ const Contact = () => {
                     <Suspense fallback={null}>
                         <ambientLight intensity={0.5} />
                         <directionalLight intensity={2.5} position={[0, 0, 1]} />
-                        <Steve position={[0, -2, -6.5]} rotation={[0, 5.75, 0]} currentAnimation={currentAnimation} />
+                        <Steve position={[0, 1.75, -6.5]} rotation={[0, 5.75, 0]} currentAnimation={currentAnimation} />
                     </Suspense>
                 </Canvas>
             </div>
