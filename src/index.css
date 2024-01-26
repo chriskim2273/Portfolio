@@ -47,7 +47,9 @@ body:has(.card[data-color="green"]:hover) {
   .blue-gradient_text {
     @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
   }
-
+  .yellow-gradient_text {
+    @apply bg-gradient-to-r from-[#FDEB71] to-[#F8D800] bg-clip-text text-transparent drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)];
+  }
   .input {
     @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
   }
@@ -190,4 +192,16 @@ body:has(.card[data-color="green"]:hover) {
   border: #fff;
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+}
+
+@keyframes fire {
+  0% { border-color: #FFA500; }
+  50% { border-color: #FF4500; }
+  100% { border-color: #FFA500; }
+}
+
+.fire-border {
+  border-width: 2px;
+  border-style: solid;
+  animation: fire 1s infinite;
 }

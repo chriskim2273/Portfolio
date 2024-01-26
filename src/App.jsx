@@ -14,6 +14,7 @@ function App() {
     <main className='h-full'>
       <Router>
         <NavBar />
+        <div className="mt-10 border-t border-black-500 w-full" />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -21,7 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
-    </main>
+    </main >
   )
 }
 

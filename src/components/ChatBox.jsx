@@ -7,6 +7,9 @@ const ChatBox = ({ currentStage }) => {
         1: (
             <div>
                 <p className='font-bold text-3xl'>Hi! I'm Christopher Kim.</p>
+                <p className='font-bold text-3xl bg-gradient-to-r bg-clip-text text-transparent 
+            from-indigo-500 via-purple-500 to-indigo-500
+            animate-text'>Welcome To My Portfolio!</p>
             </div>
         ),
         2: (

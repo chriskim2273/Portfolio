@@ -9,7 +9,7 @@ const About = () => {
         <section className="max-container">
             <h1 className="head-text">
                 Hello, I'm{" "}
-                <span className="blue-gradient_text font-semibold drop-shadow">
+                <span className="yellow-gradient_text font-semibold drop-shadow">
                     Christopher
                 </span>
             </h1>
@@ -27,8 +27,8 @@ const About = () => {
                 <div className='mt-16 flex flex-wrap gap-12'>
                     {skills.map((skill, idx) => (
                         <div key={"skill_" + String(idx)} className='block-container w-20 h-20'>
-                            <div className='btn-back rounded-xl' />
-                            <div className='btn-front rounded-xl flex justify-center items-center'>
+                            <div className='fire-border btn-back rounded-xl' />
+                            <div className='fire-border btn-front rounded-xl flex justify-center items-center'>
                                 <img src={skill.imageUrl}
                                     alt={skill.name}
                                     className="w-1/2 h-1/2 object-contain" />

@@ -6,6 +6,21 @@ export default {
   ],
   theme: {
     extend: {
+      'animation': {
+        'text': 'text 5s ease infinite',
+      },
+      'keyframes': {
+        'text': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
+        },
+      },
       colors: {
         gray: {
           200: "#D5DAE1"
@@ -16,7 +31,8 @@ export default {
         },
         blue: {
           500: "#2b77e7"
-        }
+        },
+        yellow: '#C9FB5C'
       },
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],

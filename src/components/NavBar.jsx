@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 const NavBar = () => {
     return (
         <header className="header">
-            <NavLink to="/" className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
-                <p className='blue-gradient_text'>CK</p>
+            <NavLink to="/" className="mt-1 rounded-lg bg-white items-center justify-center flex font-bold">
+                <p className='yellow-gradient_text'>CHRISTOPHER KIM</p>
             </NavLink>
             <nav className="flex text-lg gap-7 font-medium">
                 <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
@@ -18,6 +18,7 @@ const NavBar = () => {
                     Contact
                 </NavLink>
             </nav>
+
         </header>
     )
 }
