@@ -24,7 +24,7 @@ const Projects = () => {
 
             <div className="mt-5 flex flex-col gap-3 text-slate-500">
                 <p>
-                    Some descrtitpino about the projects ... fillin..
+                    Projects I am proud to share! I am currently working on many projects. I love making discord bots, useful and funny web-apps, chrome extentions, and more!
                 </p>
             </div>
 
@@ -70,6 +70,15 @@ const Projects = () => {
                             <h4 className='text-2xl font-poppins font-semibold'>
                                 {project.name}
                             </h4>
+                            <div>
+                                {
+                                    /*
+                                    projects.technologies.map((tech) => (
+                                        <p>tech</p>
+                                    ));
+                                    */
+                                }
+                            </div>
                             <p className='mt-2 text-slate-500'>
                                 {project.description}
                             </p>
@@ -111,7 +120,7 @@ const Projects = () => {
                 ))}
             </div>
 
-            <hr className='border-slate-200' />
+            <hr className='border-black-500' />
             <CTA />
         </section>
     )

@@ -16,7 +16,7 @@ const About = () => {
 
             <div className="mt-5 flex flex-col gap-3 text-slate-500">
                 <p>
-                    Description about me.... HI!
+                    I am a student at Stony Brook University studying Computer Science. I am currently in my Junior Year.
                 </p>
             </div>
 
@@ -44,7 +44,7 @@ const About = () => {
                 </h3>
                 <div className="mt-5 flex flex-col gap-3 text-slate-500">
                     <p>
-                        Description about me.... HI!
+                        I am currently a Data Engineer/Software Development Intern at IOTNation. I am super passionate about software and am open to any conversation!
                     </p>
                 </div>
 
@@ -58,14 +58,14 @@ const About = () => {
                                     <h3 className='text-black text-xl font-poppins font-semibold'>
                                         {experience.title}
                                     </h3>
-                                    <p className='text-black-500 font-medium font-base' style={{ margin: 0 }}>
+                                    <p className='text-black-500/75 font-medium font-base' style={{ margin: 0 }}>
                                         {experience.company_name}
                                     </p>
                                 </div>
 
                                 <ul className='my-5 list-disc ml-5 space-y-2'>
                                     {experience.points.map((point, pidx) => (
-                                        <li key={"experience_point_" + String(pidx)} className='text-black-500/50 font-normal pl-1 text-sm'>
+                                        <li key={"experience_point_" + String(pidx)} className='text-black-500 font-normal pl-1 text-sm'>
                                             {point}
                                         </li>
                                     ))}
@@ -77,7 +77,7 @@ const About = () => {
                 </div>
             </div>
 
-            <hr className='border-slate-200' />
+            <hr className='border-black-500' />
             <CTA />
         </section >
     )

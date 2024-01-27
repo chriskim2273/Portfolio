@@ -11,7 +11,7 @@ import BIRDS from 'vanta/dist/vanta.birds.min'
 function App() {
 
   return (
-    <main className='h-full'>
+    <main className='h-full w-full'>
       <Router>
         <NavBar />
         <div className="mt-10 border-t border-black-500 w-full" />
