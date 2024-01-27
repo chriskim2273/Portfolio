@@ -203,7 +203,8 @@ export const projects = [
         technologies: [react, javascript, python, flask, firebase, mysql],
         name: 'BogoSort Leaderboard Web App',
         description: 'A small mini project to prove that BogoSort is the best sorting algorithm. "Theory will only take you so far." - Robert J. Oppenheimer',
-        link: 'https://github.com/chriskim2273/BogoSortLeaderboard',
+        github: 'https://github.com/chriskim2273/BogoSortLeaderboard',
+        link: 'https://main--magenta-moxie-66d7f2.netlify.app/',
     },
     {
         iconUrl: summiz,
@@ -211,7 +212,8 @@ export const projects = [
         technologies: [react, javascript, firebase, flask, python, mysql],
         name: 'SwapSensei Web App',
         description: 'A web-app that recommends users alternative products based on ingredient list similarity. Front-end coded in ReactJS, backend with Flask (python), and web-scraping done with scrapy (python).',
-        link: 'https://github.com/chriskim2273/SwapSensei',
+        github: 'https://github.com/chriskim2273/SwapSensei',
+        link: '',
     },
     {
         iconUrl: pricewise,
@@ -219,7 +221,8 @@ export const projects = [
         technologies: [javascript, react],
         name: 'Ticking Tabs Chrome Extension',
         description: "A chrome extension that allows users to add timers to tabs so that they close automatically. Useful for a quick google search and for tabs that won't be revisited. Saved resources and declutters your workspace for you. A history of closed tabs enables you to re-open tabs you do want to re-visit.",
-        link: 'https://github.com/chriskim2273/TickingTabs',
+        github: 'https://github.com/chriskim2273/TickingTabs',
+        link: '',
     },
     {
         iconUrl: threads,
@@ -227,7 +230,8 @@ export const projects = [
         technologies: [javascript, typescript, react],
         name: 'SubItUp Google Calendar Integration Chrome Extension',
         description: 'A simple chrome extension written in TypeScript/JavaScript that allows the importation of SubItUp Shifts into Google Calendar.',
-        link: 'https://github.com/chriskim2273/SubItUp-Google-Calendar-Integration',
+        github: 'https://github.com/chriskim2273/SubItUp-Google-Calendar-Integration',
+        link: 'https://chromewebstore.google.com/u/5/detail/subitup-google-calendar-i/bpceepmanghbdihilafngmapgjmdfcek?hl=en',
     },
 
     {
@@ -236,7 +240,8 @@ export const projects = [
         technologies: [java, mongodb],
         name: 'Euclid Discord Bot',
         description: 'A versatile Discord chat bot combining moderation, entertainment, math problem-solving, and sleep cycle optimization features, enhancing user engagement and server management',
-        link: 'https://github.com/chriskim2273/Euclid-Discord-Chat-Bot',
+        github: 'https://github.com/chriskim2273/Euclid-Discord-Chat-Bot',
+        link: '',
     },
     {
         iconUrl: estate,
@@ -244,6 +249,7 @@ export const projects = [
         technologies: [java, mongodb],
         name: 'Stony Brook Verification Bot',
         description: 'A discord bot made in Java (using JDA) that verifies if a user is a student at stony brook using their provided StonyBrook email address.',
-        link: 'https://github.com/chriskim2273/Stony-Brook-Verification-Bot',
+        github: 'https://github.com/chriskim2273/Stony-Brook-Verification-Bot',
+        link: '',
     }
 ];
