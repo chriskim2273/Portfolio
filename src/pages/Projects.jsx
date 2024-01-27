@@ -77,7 +77,7 @@ const Projects = () => {
                             <div className='flex justify-center items-center gap-5'>
                                 {
                                     project.technologies.map((tech) => (
-                                        <img src={tech} alt={"skill"} key={`${project}_${tech}`} className='w-6 h-6 drop-shadow-md'></img>
+                                        <img src={tech} alt={"tech"} key={`${project}_${tech}`} className='w-6 h-6 drop-shadow-md'></img>
                                     ))
                                 }
                             </div>
