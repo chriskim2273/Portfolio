@@ -67,16 +67,18 @@ const Projects = () => {
                             </div>
                         */}
                         <div className='flex flex-col p-10'>
+                            <img src={github}
+                                alt="github"
+                                className='mx-auto w-10 h-10'
+                            />
                             <h4 className='text-2xl font-poppins font-semibold'>
                                 {project.name}
                             </h4>
-                            <div>
+                            <div className='flex justify-center items-center gap-5'>
                                 {
-                                    /*
-                                    projects.technologies.map((tech) => (
-                                        <p>tech</p>
-                                    ));
-                                    */
+                                    project.technologies.map((tech) => (
+                                        <img src={tech} alt={"skill"} key={`${project}_${tech}`} className='w-6 h-6 drop-shadow-md'></img>
+                                    ))
                                 }
                             </div>
                             <p className='mt-2 text-slate-500'>
@@ -122,7 +124,7 @@ const Projects = () => {
 
             <hr className='border-black-500' />
             <CTA />
-        </section>
+        </section >
     )
 }
 
