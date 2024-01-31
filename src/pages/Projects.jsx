@@ -1,16 +1,23 @@
 import React, { useRef } from 'react'
 import { projects } from '../constants'
 import { Link } from 'react-router-dom'
-import { arrow, github } from '../assets/icons'
+import { arrow, github, python } from '../assets/icons'
 import CTA from '../components/CTA'
 import YouTube from 'react-youtube'
 import { Element, Link as Scroller } from 'react-scroll'
+import { Slide } from 'react-slideshow-image'
+import 'react-slideshow-image/dist/styles.css'
 
 const handleSetActive = (to) => {
     console.log(to);
 };
 
 const Projects = () => {
+    const images = [
+        "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+        "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
+        "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    ];
     const ref = useRef(null);
 
     return (
@@ -93,8 +100,34 @@ const Projects = () => {
                             <p className='mt-2 text-slate-500'>
                                 {project.description}
                             </p>
+                            <div className='flex justify-center gap-5 mt-2'>
+                                <img src={github} // change to question mark
+                                    alt="questionmark"
+                                    className='w-4 h-4 object-contain'
+                                />
+                                <p>{project.why}</p>
+                            </div>
+                            <div className='flex justify-center gap-5 mt-2'>
+                                <img src={github} // Change to a Star??? It's to shout out services used: Planetscale, etc.
+                                    alt="star"
+                                    className='w-4 h-4 object-contain'
+                                />
+                                <p>{project.shoutouts}</p>
+                            </div>
+                            <div className='flex justify-center gap-5 mt-2'>
+                                <img src={github} // Maybe change to plus sign? This is for what I learned from this project.
+                                    alt="plus"
+                                    className='w-4 h-4 object-contain'
+                                />
+                                <p>{project.learned}</p>
+                            </div>
+                            <div className='mt-5 justify-center items-center'>
+                                <Slide>
+                                    <img className='h-10 w-10' src={python} />
+                                </Slide>
+                            </div>
                             <div className='mt-5 flex justify-center items-center'>
-                                <YouTube videoId={"2g811Eo7K8U"
+                                {/*<YouTube videoId={"2g811Eo7K8U"
                                     //projects.videoId
                                 } opts={{
                                     height: '390',
@@ -105,6 +138,7 @@ const Projects = () => {
                                 }} onReady={(event) => {
                                     event.target.pauseVideo();
                                 }} />
+                            */}
                             </div>
                             <div className='mt-7 flex items-center justify-center gap-20 font-poppins'>
                                 {project.link != '' && (<div className='flex items-center justify-center gap-2 font-poppins'>
