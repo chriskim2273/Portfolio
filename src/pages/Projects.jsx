@@ -26,15 +26,18 @@ const Projects = () => {
                 <p>
                     Projects I am proud to share! I am currently working on many projects. I love making discord bots, useful and funny web-apps, chrome extentions, and more!
                 </p>
+                <p className='mt-1 font-semibold'>
+                    Click on any project name to jump to its info!
+                </p>
             </div>
 
-            <div className='mt-10'>
+            <div className='mt-7'>
                 {/*
                     <p className='font-poppins'>
                         Links to Projects
                     </p>
                 */}
-                <div className='rounded-lg border-2 border-black bg-blue-50 p-4 flex flex-wrap overflow-x-auto gap-5 items-center justify-center'>
+                <div className='rounded-lg border-2 border-black bg-blue-50 p-4 grid gap-6 items-center justify-center'>
                     {projects.map((project, idx) => (
                         <Scroller
                             style={{ cursor: "pointer" }}
@@ -74,6 +77,12 @@ const Projects = () => {
                             <h4 className='text-2xl font-poppins font-semibold'>
                                 {project.name}
                             </h4>
+                            <div className='flex justify-center gap-2 my-2'>
+                                <p className='underline'>STATUS: </p>
+                                {project.completed == true && <p className='font-bold text-green-400'>COMPLETED</p>}
+                                {project.completed != true && project.mvp != true && <p className='font-bold text-red-400'>IN PROGRESS</p>}
+                                {project.mvp == true && <p className='font-bold text-blue-400'>MVP</p>}
+                            </div>
                             <div className='flex justify-center items-center gap-5'>
                                 {
                                     project.technologies.map((tech) => (
@@ -98,7 +107,7 @@ const Projects = () => {
                                 }} />
                             </div>
                             <div className='mt-7 flex items-center justify-center gap-20 font-poppins'>
-                                <div className='flex items-center justify-center gap-2 font-poppins'>
+                                {project.link != '' && (<div className='flex items-center justify-center gap-2 font-poppins'>
                                     <Link to={project.link} target="_blank" rel="noopener noreferrer" className='front-semibold text-blue-600'>
                                         Live Link
                                     </Link>
@@ -106,7 +115,7 @@ const Projects = () => {
                                         src={arrow}
                                         alt="arrow"
                                         className='w-4 h-4 object-contain' />
-                                </div>
+                                </div>)}
                                 <div className='flex items-center justify-center gap-2 font-poppins'>
                                     <Link to={project.github} target="_blank" rel="noopener noreferrer" className='front-semibold text-blue-600'>
                                         Github Link

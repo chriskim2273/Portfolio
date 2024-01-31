@@ -205,6 +205,7 @@ export const projects = [
         description: 'A small mini project to prove that BogoSort is the best sorting algorithm. "Theory will only take you so far." - Robert J. Oppenheimer',
         github: 'https://github.com/chriskim2273/BogoSortLeaderboard',
         link: 'https://main--magenta-moxie-66d7f2.netlify.app/',
+        mvp: true
     },
     {
         iconUrl: summiz,
@@ -222,7 +223,7 @@ export const projects = [
         name: 'Ticking Tabs Chrome Extension',
         description: "A chrome extension that allows users to add timers to tabs so that they close automatically. Useful for a quick google search and for tabs that won't be revisited. Saved resources and declutters your workspace for you. A history of closed tabs enables you to re-open tabs you do want to re-visit.",
         github: 'https://github.com/chriskim2273/TickingTabs',
-        link: '',
+        link: 'https://chromewebstore.google.com/detail/ticking-tabs/ipmnbeojnnjhjnanpjpdeikmochkjjjk?hl=en',
     },
     {
         iconUrl: threads,
@@ -232,6 +233,7 @@ export const projects = [
         description: 'A simple chrome extension written in TypeScript/JavaScript that allows the importation of SubItUp Shifts into Google Calendar.',
         github: 'https://github.com/chriskim2273/SubItUp-Google-Calendar-Integration',
         link: 'https://chromewebstore.google.com/u/5/detail/subitup-google-calendar-i/bpceepmanghbdihilafngmapgjmdfcek?hl=en',
+        mvp: true
     },
 
     {
@@ -242,6 +244,7 @@ export const projects = [
         description: 'A versatile Discord chat bot combining moderation, entertainment, math problem-solving, and sleep cycle optimization features, enhancing user engagement and server management',
         github: 'https://github.com/chriskim2273/Euclid-Discord-Chat-Bot',
         link: '',
+        completed: true,
     },
     {
         iconUrl: estate,
@@ -251,5 +254,38 @@ export const projects = [
         description: 'A discord bot made in Java (using JDA) that verifies if a user is a student at stony brook using their provided StonyBrook email address.',
         github: 'https://github.com/chriskim2273/Stony-Brook-Verification-Bot',
         link: '',
-    }
+        completed: true
+    },
+    {
+        iconUrl: estate,
+        theme: 'btn-back-black',
+        technologies: [python, javascript, css, html],
+        name: 'Twitter Sentiment Analysis Stock App',
+        description: '2022 SBU Hacks Winner for the Fintech Category! A web-app made within the 48 hours alotted for the hackathon that utilizes sentiment analysis machine learning models provided by HuggingFace to analyse tweets retrieved using the Twitter API to provide recommendations to stocks.',
+        github: 'https://github.com/chriskim2273/SBUHacks-TwitterStockApp',
+        link: '',
+        compelted: true
+    },
+    {
+        iconUrl: estate,
+        theme: 'btn-back-black',
+        technologies: [python],
+        name: 'Is That Important?',
+        description: 'The final project for my CSE 354 (Natural Language Processing) class. It is simply research, tests, and observations made about modern text generational models such as GPT and FLAN.',
+        github: 'https://github.com/chriskim2273/IsThatImportant',
+        link: '',
+        completed: true
+    },
+    {
+        iconUrl: estate,
+        theme: 'btn-back-black',
+        technologies: [cpp],
+        name: 'Text Based RPG',
+        description: "My highschool sophomore year computer science class final. It's  a text-based RPG that handles user inputs WASD to move the character, with progression saving, randomized map generation, random enemy movement and item spawns.",
+        github: 'https://github.com/chriskim2273/TextBasedRPG',
+        link: '',
+        completed: true
+    },
+
+
 ];

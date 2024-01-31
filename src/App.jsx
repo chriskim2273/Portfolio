@@ -6,20 +6,19 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
-import BIRDS from 'vanta/dist/vanta.birds.min'
 
 function App() {
-
+  const leadingPath = '/Portfolio';
   return (
     <main className='h-full w-full'>
       <Router>
         <NavBar />
         <div className="mt-10 border-t border-black-500 w-full" />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path={leadingPath + "/"} element={<Home />} />
+          <Route path={leadingPath + "/about"} element={<About />} />
+          <Route path={leadingPath + "/projects"} element={<Projects />} />
+          <Route path={leadingPath + "/contact"} element={<Contact />} />
         </Routes>
       </Router>
     </main >
