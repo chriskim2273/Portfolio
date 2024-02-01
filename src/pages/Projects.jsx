@@ -1,11 +1,11 @@
 import React, { useRef } from 'react'
 import { projects } from '../constants'
 import { Link } from 'react-router-dom'
-import { arrow, github, python } from '../assets/icons'
+import { arrow, github, mindgear, python, questionmark, starexclaim } from '../assets/icons'
 import CTA from '../components/CTA'
 import YouTube from 'react-youtube'
 import { Element, Link as Scroller } from 'react-scroll'
-import { Slide } from 'react-slideshow-image'
+import { Slide, Zoom } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 
 const handleSetActive = (to) => {
@@ -48,7 +48,7 @@ const Projects = () => {
                     {projects.map((project, idx) => (
                         <Scroller
                             style={{ cursor: "pointer" }}
-                            className="nav-link blue-gradient_text"
+                            className="nav-link blue-gradient_text font-semibold"
                             to={String(project.name)}
                             spy={true}
                             smooth={true}
@@ -100,32 +100,43 @@ const Projects = () => {
                             <p className='mt-2 text-slate-500'>
                                 {project.description}
                             </p>
-                            <div className='flex justify-center gap-5 mt-2'>
-                                <img src={github} // change to question mark
-                                    alt="questionmark"
-                                    className='w-4 h-4 object-contain'
-                                />
+                            <div className='mt-2 border'>
+                                <div className='flex items-center justify-center gap-2 mt-2'>
+                                    <img src={questionmark} // change to question mark
+                                        alt="questionmark"
+                                        className='w-4 h-4 object-contain'
+                                    />
+                                    <p className=' font-semibold'>Why?</p>
+                                </div>
                                 <p>{project.why}</p>
                             </div>
-                            <div className='flex justify-center gap-5 mt-2'>
-                                <img src={github} // Change to a Star??? It's to shout out services used: Planetscale, etc.
-                                    alt="star"
-                                    className='w-4 h-4 object-contain'
-                                />
+                            <div className='border'>
+                                <div className='flex items-center justify-center gap-2 mt-2'>
+                                    <img src={starexclaim}
+                                        alt="questionmark"
+                                        className='w-4 h-4 object-contain'
+                                    />
+                                    <p className='font-semibold'>Services Used/Shoutouts</p>
+                                </div>
                                 <p>{project.shoutouts}</p>
                             </div>
-                            <div className='flex justify-center gap-5 mt-2'>
-                                <img src={github} // Maybe change to plus sign? This is for what I learned from this project.
-                                    alt="plus"
-                                    className='w-4 h-4 object-contain'
-                                />
+                            <div className='border'>
+                                <div className='flex items-center justify-center gap-2 mt-2'>
+                                    <img src={mindgear}
+                                        alt="mindgear"
+                                        className='w-4 h-4 object-contain'
+                                    />
+                                    <p className='font-semibold'>What I Learned</p>
+                                </div>
                                 <p>{project.learned}</p>
                             </div>
-                            <div className='mt-5 justify-center items-center'>
-                                <Slide>
-                                    <img className='h-10 w-10' src={python} />
+                            {project.images != undefined && <div className='mt-5 justify-center items-center'>
+                                <Slide scale={0.4} className='flex justify-center'>
+                                    {project.images.map((image) => (
+                                        <img className='mx-auto' src={image} key={`${image}_image`} />
+                                    ))}
                                 </Slide>
-                            </div>
+                            </div>}
                             <div className='mt-5 flex justify-center items-center'>
                                 {/*<YouTube videoId={"2g811Eo7K8U"
                                     //projects.videoId
