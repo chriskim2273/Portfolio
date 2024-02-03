@@ -27,7 +27,7 @@ const Home = () => {
 
     return (
         <section className='w-full h-screen relative'>
-            <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+            <div className='absolute top-20 left-0 right-0 z-10 flex items-center justify-center'>
                 {currentStage && <ChatBox currentStage={currentStage} />}
             </div>
             <div className='absolute top-64 mt-80 left-0 right-0 z-10 rounded-3xl border-black w-fit m-auto'>
@@ -61,7 +61,7 @@ const Home = () => {
                     <Robloxian position={scenePosition} isRotating={isRotating} setIsRotating={setIsRotating} currentStage={currentStage} setCurrentStage={setCurrentStage} />
                 </Suspense>
             </Canvas>
-            <p>Nothing to see here...</p>
+            <p>Nothing to see here :)</p>
 
         </section>
 

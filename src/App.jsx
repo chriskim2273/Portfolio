@@ -6,10 +6,9 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
-import BIRDS from 'vanta/dist/vanta.birds.min'
 
 function App() {
-
+  const leadingPath = '/Portfolio';
   return (
     <main className='h-full w-full'>
       <Router>

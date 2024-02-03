@@ -40,8 +40,14 @@ import vsc from './vscode-light.svg'
 import kibana from './kibana.svg'
 import elasticsearch from './elasticsearch.svg'
 import firebase from './firebase.svg'
+import mindgear from './mind_gear.svg'
+import starexclaim from './star-exclaim.svg'
+import questionmark from './question_mark.svg'
 
 export {
+    mindgear,
+    starexclaim,
+    questionmark,
     kibana,
     elasticsearch,
     firebase,
