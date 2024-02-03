@@ -52,7 +52,7 @@ const Projects = () => {
                             to={String(project.name)}
                             spy={true}
                             smooth={true}
-                            offset={-150}
+                            offset={0}
                             duration={1000}
                             key={String(project.name)}
                         >
@@ -62,10 +62,11 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className='flex flex-wrap my-20 gap-52'>
+            <div className='flex flex-wrap my-20 gap-20'>
                 {projects.map((project) => (
-                    <Element name={project.name} key={project.name} className='element lg:w=[400px] w-full rounded-lg bg-blue-50 drop-shadow-2xl'>
-                        {/*
+                    <>
+                        <Element name={project.name} key={project.name} className='element lg:w=[400px] w-full rounded-lg bg-blue-50 drop-shadow-2xl'>
+                            {/*
                             <div className='block-container w-12 h-12 flex'>
                                 <div className={`btn-back rounded-xl ${project.theme}`} />
                                 <div className='btn-front rounded-xl flex justify-center items-center'>
@@ -76,69 +77,69 @@ const Projects = () => {
                                 </div>
                             </div>
                         */}
-                        <div className='flex flex-col p-10'>
-                            <img src={github}
-                                alt="github"
-                                className='mx-auto w-10 h-10'
-                            />
-                            <h4 className='text-2xl font-poppins font-semibold'>
-                                {project.name}
-                            </h4>
-                            <div className='flex justify-center gap-2 my-2'>
-                                <p className='underline'>STATUS: </p>
-                                {project.completed == true && <p className='font-bold text-green-400'>COMPLETED</p>}
-                                {project.completed != true && project.mvp != true && <p className='font-bold text-red-400'>IN PROGRESS</p>}
-                                {project.mvp == true && <p className='font-bold text-blue-400'>MVP</p>}
-                            </div>
-                            <div className='flex justify-center items-center gap-5'>
-                                {
-                                    project.technologies.map((tech) => (
-                                        <img src={tech} alt={"tech"} key={`${project}_${tech}`} className='w-6 h-6 drop-shadow-md'></img>
-                                    ))
-                                }
-                            </div>
-                            <p className='mt-2 text-slate-500'>
-                                {project.description}
-                            </p>
-                            <div className='mt-2 border'>
-                                <div className='flex items-center justify-center gap-2 mt-2'>
-                                    <img src={questionmark} // change to question mark
-                                        alt="questionmark"
-                                        className='w-4 h-4 object-contain'
-                                    />
-                                    <p className=' font-semibold'>Why?</p>
+                            <div className='flex flex-col p-10'>
+                                <img src={github}
+                                    alt="github"
+                                    className='mx-auto w-10 h-10'
+                                />
+                                <h4 className='text-2xl font-poppins font-semibold'>
+                                    {project.name}
+                                </h4>
+                                <div className='flex justify-center gap-2 my-2'>
+                                    <p className='underline'>STATUS: </p>
+                                    {project.completed == true && <p className='font-bold text-green-400'>COMPLETED</p>}
+                                    {project.completed != true && project.mvp != true && <p className='font-bold text-red-400'>IN PROGRESS</p>}
+                                    {project.mvp == true && <p className='font-bold text-blue-400'>MVP</p>}
                                 </div>
-                                <p>{project.why}</p>
-                            </div>
-                            <div className='border'>
-                                <div className='flex items-center justify-center gap-2 mt-2'>
-                                    <img src={starexclaim}
-                                        alt="questionmark"
-                                        className='w-4 h-4 object-contain'
-                                    />
-                                    <p className='font-semibold'>Services Used/Shoutouts</p>
+                                <div className='flex justify-center items-center gap-5'>
+                                    {
+                                        project.technologies.map((tech) => (
+                                            <img src={tech} alt={"tech"} key={`${project}_${tech}`} className='w-6 h-6 drop-shadow-md'></img>
+                                        ))
+                                    }
                                 </div>
-                                <p>{project.shoutouts}</p>
-                            </div>
-                            <div className='border'>
-                                <div className='flex items-center justify-center gap-2 mt-2'>
-                                    <img src={mindgear}
-                                        alt="mindgear"
-                                        className='w-4 h-4 object-contain'
-                                    />
-                                    <p className='font-semibold'>What I Learned</p>
+                                <p className='mt-4 text-slate-500'>
+                                    {project.description}
+                                </p>
+                                <div className='mt-4 border'>
+                                    <div className='flex items-center justify-center gap-2 mt-2'>
+                                        <img src={questionmark} // change to question mark
+                                            alt="questionmark"
+                                            className='w-4 h-4 object-contain'
+                                        />
+                                        <p className=' font-semibold'>Why?</p>
+                                    </div>
+                                    <p>{project.why}</p>
                                 </div>
-                                <p>{project.learned}</p>
-                            </div>
-                            {project.images != undefined && <div className='mt-5 justify-center items-center'>
-                                <Slide scale={0.4} className='flex justify-center'>
-                                    {project.images.map((image) => (
-                                        <img className='mx-auto' src={image} key={`${image}_image`} />
-                                    ))}
-                                </Slide>
-                            </div>}
-                            <div className='mt-5 flex justify-center items-center'>
-                                {/*<YouTube videoId={"2g811Eo7K8U"
+                                <div className='border'>
+                                    <div className='flex items-center justify-center gap-2 mt-2'>
+                                        <img src={starexclaim}
+                                            alt="questionmark"
+                                            className='w-4 h-4 object-contain'
+                                        />
+                                        <p className='font-semibold'>Services Used/Shoutouts</p>
+                                    </div>
+                                    <p>{project.shoutouts}</p>
+                                </div>
+                                <div className='border'>
+                                    <div className='flex items-center justify-center gap-2 mt-2'>
+                                        <img src={mindgear}
+                                            alt="mindgear"
+                                            className='w-4 h-4 object-contain'
+                                        />
+                                        <p className='font-semibold'>What I Learned</p>
+                                    </div>
+                                    <p>{project.learned}</p>
+                                </div>
+                                {project.images != undefined && <div className='mt-5 justify-center items-center'>
+                                    <Slide scale={0.4} className='flex justify-center'>
+                                        {project.images.map((image) => (
+                                            <img className='mx-auto' src={image} key={`${image}_image`} />
+                                        ))}
+                                    </Slide>
+                                </div>}
+                                <div className='mt-5 flex justify-center items-center'>
+                                    {/*<YouTube videoId={"2g811Eo7K8U"
                                     //projects.videoId
                                 } opts={{
                                     height: '390',
@@ -150,29 +151,31 @@ const Projects = () => {
                                     event.target.pauseVideo();
                                 }} />
                             */}
-                            </div>
-                            <div className='mt-7 flex items-center justify-center gap-20 font-poppins'>
-                                {project.link != '' && (<div className='flex items-center justify-center gap-2 font-poppins'>
-                                    <Link to={project.link} target="_blank" rel="noopener noreferrer" className='front-semibold text-blue-600'>
-                                        Live Link
-                                    </Link>
-                                    <img
-                                        src={arrow}
-                                        alt="arrow"
-                                        className='w-4 h-4 object-contain' />
-                                </div>)}
-                                <div className='flex items-center justify-center gap-2 font-poppins'>
-                                    <Link to={project.github} target="_blank" rel="noopener noreferrer" className='front-semibold text-blue-600'>
-                                        Github Link
-                                    </Link>
-                                    <img src={github}
-                                        alt="github"
-                                        className='w-4 h-4 object-contain'
-                                    />
+                                </div>
+                                <div className='mt-7 flex items-center justify-center gap-20 font-poppins'>
+                                    {project.link != '' && (<div className='flex items-center justify-center gap-2 font-poppins'>
+                                        <Link to={project.link} target="_blank" rel="noopener noreferrer" className='front-semibold text-blue-600'>
+                                            Live Link
+                                        </Link>
+                                        <img
+                                            src={arrow}
+                                            alt="arrow"
+                                            className='w-4 h-4 object-contain' />
+                                    </div>)}
+                                    <div className='flex items-center justify-center gap-2 font-poppins'>
+                                        <Link to={project.github} target="_blank" rel="noopener noreferrer" className='front-semibold text-blue-600'>
+                                            Github Link
+                                        </Link>
+                                        <img src={github}
+                                            alt="github"
+                                            className='w-4 h-4 object-contain'
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Element>
+                        </Element>
+                        <div className="relative left-1/2 -ml-0.5 w-0.5 h-24 bg-gray-600"></div>
+                    </>
                 ))}
             </div>
 

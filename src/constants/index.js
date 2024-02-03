@@ -260,17 +260,23 @@ export const projects = [
         github: 'https://github.com/chriskim2273/Euclid-Discord-Chat-Bot',
         link: '',
         completed: true,
+        why: "My friends and I use Discord as our main communication and as a platform, it has been growing at a tremendous rate. I wanted to make a custom bot that fulfilled general and specific needs. We wanted features such as equation solving given an image, randomized and MMR based custom team generation, trolling features, knowing when we should go to bed based off sleep cycle data and more.",
+        shoutouts: "Discord JDA (framework for Discord bots in Java), MongoDB (storing data), Wolfram API (Equation Solving), MathPix API (OCR)",
+        learned: "This was one of the first major personal projects I had embarked on in my time as a prespective Software Engineer and Computer Scientist. Through this project, I learned how to implement APIs and Non-SQL databases while also enforcing and improving my expertise on Java as a whole."
     },
     {
         iconUrl: estate,
         theme: 'btn-back-black',
         technologies: [java, mongodb],
         name: 'Stony Brook Verification Bot',
-        description: 'A discord bot made in Java (using JDA) that verifies if a user is a student at stony brook using their provided StonyBrook email address.',
+        description: "A discord bot made in Java (using JDA) that verifies if a user is a student at stony brook using their provided StonyBrook email address. It sends a pin to the user's Stookbrook.edu email address for confirmation",
         github: 'https://github.com/chriskim2273/Stony-Brook-Verification-Bot',
         link: '',
         completed: true,
-        images: ["https://preview.redd.it/gncesr0bo3s71.png?width=364&format=png&auto=webp&s=653b9d5ba73ad0e2fab5fe7aa3864d684c108ce6", "https://preview.redd.it/iofsg3xko3s71.png?width=295&format=png&auto=webp&s=93c03705c842674826f4ef0d56cf9d552a30e39a"]
+        images: ["https://preview.redd.it/gncesr0bo3s71.png?width=364&format=png&auto=webp&s=653b9d5ba73ad0e2fab5fe7aa3864d684c108ce6", "https://preview.redd.it/iofsg3xko3s71.png?width=295&format=png&auto=webp&s=93c03705c842674826f4ef0d56cf9d552a30e39a"],
+        why: "With the ever increasing popularity of Discord, it become more and more evident how importance security was becoming. Servers that should be safe havens became easily susceptible to raids (mass attacks by foreign users), bot attacks, and more. I wanted to create a bot that could ensure that users in certain servers were actual students at Stony Brook University and not others with malicious intent.",
+        shoutouts: "Discord JDA (framework for Discord bots in Java), MongoDB (database), GoogleSMTP (for sending emails)",
+        learned: "With this project, I learned how to utilize Google SMTP to send emails. However, a majority of the skills and tools utilized in the development in this project are of those I am already familiar with. Nonetheless, the development of this proejct had definitely solidified my knowledge with said skills and tools."
     },
     {
         iconUrl: estate,
@@ -281,7 +287,10 @@ export const projects = [
         github: 'https://github.com/chriskim2273/SBUHacks-TwitterStockApp',
         link: 'https://devpost.com/software/twitter-stock-suggestor',
         completed: true,
-        images: ["https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/233/651/datas/gallery.jpg"]
+        images: ["https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/233/651/datas/gallery.jpg"],
+        why: "Three friends and I decided to attend Stony Brook University's largest Hackathon. We wanted to create a web-app specifially for the FinTech category and were really passionate and interested in AI at the time.",
+        shoutouts: "HuggingFace (provided the Sentiment Analysis Machine Learning Model), MongoDB (database), Flask (API), Tweepy (Twitter API for Python)",
+        learned: "We all worked on both the front-end and back-end of the project. However, I mainly worked on the Backend API of the application. I was able to solidify my knowledge on querying and handling API requests to other apis such as the Twitter API alongside utilizing HunggingFace models. Furthermore, it also solidified my knowledge with the Flask framework and implementing Non-SQL databases such as MongoDB.",
     },
     {
         iconUrl: estate,
@@ -291,7 +300,10 @@ export const projects = [
         description: 'The final project for my CSE 354 (Natural Language Processing) class. It is simply research, tests, and observations made about modern text generational models such as GPT and FLAN.',
         github: 'https://github.com/chriskim2273/IsThatImportant',
         link: 'https://github.com/chriskim2273/IsThatImportant/blob/main/CSE_354_FINAL.ipynb',
-        completed: true
+        completed: true,
+        why: "Class Assignment (Final Project)",
+        shoutouts: "Google Colab",
+        learned: "I mainly learned the current status of mdoern Generative AI, such as their performance (strengths and shortcomings), alongside the effectiveness of strategies in prompting that are known today. I also gained experience creating informative documents in an IPython Notebook.",
     },
     {
         iconUrl: estate,
@@ -301,7 +313,10 @@ export const projects = [
         description: "My highschool sophomore year computer science class final. It's  a text-based RPG that handles user inputs WASD to move the character, with progression saving, randomized map generation, random enemy movement and item spawns.",
         github: 'https://github.com/chriskim2273/TextBasedRPG',
         link: '',
-        completed: true
+        completed: true,
+        why: "Class Assignment (Final Project)",
+        shoutouts: "Coded Almost Entirely in C++.",
+        learned: "I mainly learned the C++ language. I was very much still a novice at this stage, however, it is great to see how far I've come since this time."
     },
 
 

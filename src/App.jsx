@@ -15,10 +15,10 @@ function App() {
         <NavBar />
         <div className="mt-10 border-t border-black-500 w-full" />
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/about" exact element={<About />} />
-          <Route path="/projects" exact element={<Projects />} />
-          <Route path="/contact" exact element={<Contact />} />
+          <Route path={leadingPath + "/"} exact element={<Home />} />
+          <Route path={leadingPath + "/about"} exact element={<About />} />
+          <Route path={leadingPath + "/projects"} exact element={<Projects />} />
+          <Route path={leadingPath + "/contact"} exact element={<Contact />} />
         </Routes>
       </Router>
     </main >
