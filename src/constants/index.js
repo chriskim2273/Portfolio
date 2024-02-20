@@ -319,5 +319,16 @@ export const projects = [
         learned: "I mainly learned the C++ language. I was very much still a novice at this stage, however, it is great to see how far I've come since this time."
     },
 
-
+    {
+        iconUrl: estate,
+        theme: 'btn-back-black',
+        technologies: [javascript, python, react, mongodb, firebase, flask],
+        name: 'Split Picker (SBUHacks 2024)',
+        description: "The project we made and submitted for the 2024 SBUHacks hackathon. It was a tool aimed to take the weight of having to do research and plan workouts out of the equation.",
+        github: 'https://github.com/chriskim2273/SplitPicker_SBUHacks2024/tree/main',
+        link: '',
+        why: "SBUHacks 2024 and Passion Project",
+        shoutouts: "Major League Hacking",
+        learned: "Learned how to work with a team to complete a project under a really tight deadline. Communication was a major thing we improved on during this experience."
+    },
 ];
